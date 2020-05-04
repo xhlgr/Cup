@@ -97,13 +97,14 @@
             </button>
             <a class="navbar-brand" href="./">Wybus网站状态</a>
           </div>
+          <!--
           <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-              <!--<li><a href="https://wybus.xyz">主页</a></li>-->
+              <li><a href="https://wybus.xyz">主页</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
             </ul>
-          </div>
+          </div>-->
         </div>
       </div>
     </div>
@@ -142,7 +143,7 @@
     <tr class="{{alert}}">
       <td class="sertitle">
         <span class="label label-status label-{{label}}"><span class="glyphicon glyphicon-{{statusicon}}"></span> {{statustext}}</span>
-        <span class="wname">{{friendly_name}}</span>
+        <span class="wname"><a href="{{url}}">{{friendly_name}}</a></span>
       </td>
       {{#charts}}
       <td class="center">
