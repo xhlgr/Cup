@@ -1,10 +1,12 @@
-# Cup
+#uptime
 
-基于 [Upscuits](https://github.com/digibart/upscuits)、[酷Q状态](https://status.cqp.cc)，以 [UptimeRobot](https://uptimerobot.com/) 为数据源的在线状态统计页面。
+基于 [Upscuits](https://github.com/digibart/upscuits)、[酷Q状态](https://github.com/CoolQ/Cup)，以 [UptimeRobot](https://uptimerobot.com/) 为数据源的在线状态统计页面。
 
 **2016-10-06** Uptime Robot 已经新增 Public Status Pages 功能，详见 [官网](https://blog.uptimerobot.com/introducing-public-status-pages-yay/)。
 
 **2019-02-15** Cup 已支持 Uptime Robot APIv2，请尽快更新您的 Cup 版本，Uptime Robot 已停止支持 APIv1。
+
+**2020-0005-05** 增加获取最近24h平均响应时间(不会做前端，加了文字后bar行的表格行高始终是17px，干脆给bar高度17px)及反转日期排序从左到右递减。
 
 ## 使用方法
 
@@ -15,7 +17,7 @@
 
 ## 演示
 
-https://xhlgr.github.io/Cup/
+https://xhlgr.github.io/uptimestatus
 
 ## License
 
