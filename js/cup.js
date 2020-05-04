@@ -44,7 +44,6 @@ myApp.dashboard = (function($) {
   }
   function getUptimeRanges() {
     var now = +new Date();
-    var midnight = +(new Date).setHours(0, 0, 0, 0);
     now = Math.floor(now / 1000);
     midnight = Math.floor(midnight / 1000);
 
@@ -80,6 +79,7 @@ myApp.dashboard = (function($) {
 
   /* build the html */
   function buildServerHTML(data, ids) {
+    console.log(data);
     data.alert = "";
     switch (parseInt(data.status, 10)) {
       case 0:
