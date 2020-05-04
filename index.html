@@ -140,7 +140,7 @@
   </div>
   <script type="template/mustache" id="server-template">
     <tr class="{{alert}}">
-      <td rowspan="2" class="sertitle">
+      <td class="sertitle">
         <span class="label label-status label-{{label}}"><span class="glyphicon glyphicon-{{statusicon}}"></span> {{statustext}}</span>
         <span class="wname">{{friendly_name}}</span>
       </td>
@@ -151,7 +151,7 @@
       {{/charts}}
     </tr>
     <tr class="{{alert}} barl">
-      <td colspan="2">
+      <td>
         {{avgtime}}
       </td>
       <td colspan="8" class="barls">
