@@ -24,7 +24,7 @@ myApp.dashboard = (function($) {
 
     $_servertitle.append("<th style=\"width:21%\"></th>");
     $_servertitle.append("<th style=\"width:9%\">近30日</th>");
-    for (var d = 6; d >= 0; d--) {
+    for (var d = 0; d <= 6; d++) {
       tmpdate = new Date(+ new Date() - 86400000 * d);
       datestr = (tmpdate.getMonth() + 1) + "-" + tmpdate.getDate();
       $_servertitle.append("<th style=\"width:10%\">" + datestr + "</th>");
@@ -50,12 +50,12 @@ myApp.dashboard = (function($) {
 
     var r = []; // custom_uptime_ranges
     r.push((now - 86400 * 30) + '_' + now);
-    r.push((midnight - 86400 * 6) + '_' + (midnight - 86400 * 5 - 1));
-    r.push((midnight - 86400 * 5) + '_' + (midnight - 86400 * 4 - 1));
-    r.push((midnight - 86400 * 4) + '_' + (midnight - 86400 * 3 - 1));
-    r.push((midnight - 86400 * 3) + '_' + (midnight - 86400 * 2 - 1));
-    r.push((midnight - 86400 * 2) + '_' + (midnight - 86400 * 1 - 1));
     r.push((midnight - 86400 * 1) + '_' + (midnight - 86400 * 0 - 1));
+    r.push((midnight - 86400 * 2) + '_' + (midnight - 86400 * 1 - 1));
+    r.push((midnight - 86400 * 3) + '_' + (midnight - 86400 * 2 - 1));
+    r.push((midnight - 86400 * 4) + '_' + (midnight - 86400 * 3 - 1));
+    r.push((midnight - 86400 * 5) + '_' + (midnight - 86400 * 4 - 1));
+    r.push((midnight - 86400 * 6) + '_' + (midnight - 86400 * 5 - 1));
     if (now === midnight) now += 1;
     r.push(midnight + '_' + now);
     return { ranges: r.join('-'), secondsToday: now - midnight };
@@ -136,12 +136,12 @@ myApp.dashboard = (function($) {
       bar.push({
         typeid: typeid,
         len: 1,
-        left: barstarttime,
-        right: barendtime
+        left: barendtime,
+        right: barstarttime
       });
     } else {
-      var starttime = barstarttime,
-          endtime = barendtime,
+      var starttime = barendtime,
+          endtime = barstarttime,
           starttype, endtype;
       for (var r = 0; r < data.logs.length; r++) {
         starttime = data.logs[r].datetime * 1000;
