@@ -121,7 +121,7 @@
           <b>当前状态：</b>正在检测运行状态，请稍候..
         </div>
         <div class="table-responsive">
-          <table class="table table-hover check">
+          <table class="table table-hover check" style:"table-layout:fixed;">
             <thead>
               <tr id="server-title">
               </tr>
@@ -151,7 +151,7 @@
       {{/charts}}
     </tr>
     <tr class="{{alert}} barl">
-      <td class="barls" style="width:21%;max-height:8px;text-align:center;font-size:8px;overflow:hidden;">
+      <td class="barls" style="width:21%;max-height:8px;text-align:center;font-size:8px;overflow:hidden;word-break:keep-all;white-space:nowrap;text-overflow:ellipsis;">
           {{avgtime}}
       </td>
       <td colspan="8" class="barls">
