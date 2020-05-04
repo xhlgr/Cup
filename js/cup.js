@@ -140,8 +140,8 @@ myApp.dashboard = (function($) {
         right: barstarttime
       });
     } else {
-      var starttime = barendtime,
-          endtime = barstarttime,
+      var starttime = barstarttime,
+          endtime = barendtime,
           starttype, endtype;
       for (var r = 0; r < data.logs.length; r++) {
         starttime = data.logs[r].datetime * 1000;
@@ -167,8 +167,8 @@ myApp.dashboard = (function($) {
           bar.push({
             typeid: endtype,
             len: (endtime - starttime) / period,
-            left: starttime,
-            right: endtime
+            left: endtime,
+            right: starttime
           });
         }
         endtime = starttime;
@@ -197,8 +197,8 @@ myApp.dashboard = (function($) {
           bar.push({
             typeid: starttype,
             len: remainlen,
-            start: barstarttime,
-            end: bar[bar.length - 1].left
+            start: bar[bar.length - 1].left,
+            end: barstarttime
           });
         }
       }
