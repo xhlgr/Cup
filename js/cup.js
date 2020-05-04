@@ -80,7 +80,6 @@ myApp.dashboard = (function($) {
 
   /* build the html */
   function buildServerHTML(data, ids) {
-    console.log(data)
     data.alert = "";
     switch (parseInt(data.status, 10)) {
       case 0:
@@ -256,7 +255,8 @@ myApp.dashboard = (function($) {
       { uptime: uptimes[7], uptimetext: uptimetext[7], uptype: getUptimeColor, upsign: getUptimeSign }
     ];
     //average_response_time
-    data.avgtime=Number(data.average_response_time).toFixed(2)
+    data.avgtime=Number(data.average_response_time).toFixed(2);
+    console.log(data.avgtime);
     var $output = $(Mustache.render(_template, data));
     return $output;
   }
