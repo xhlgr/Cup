@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>酷Q状态</title>
+  <title>Wybus网站状态</title>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <style>
@@ -95,12 +95,11 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="./">酷Q状态</a>
+            <a class="navbar-brand" href="./">Wybus网站状态</a>
           </div>
           <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-              <li><a href="https://cqp.cc/forum.php">社区</a></li>
-              <li><a href="https://cqp.cc/b/app">应用</a></li>
+              <li><a href="https://wybus.xyz">主页</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
             </ul>
@@ -113,10 +112,10 @@
     <div class="row">
       <div class="col-lg-10 col-lg-offset-1">
         <div id="stattip-err" class="alert alert-warning hide" role="alert">
-          <b>当前状态：</b>酷Q部分服务发生异常，我们将尽快修复。
+          <b>当前状态：</b>部分服务发生异常，我们将尽快修复。
         </div>
         <div id="stattip-ok" class="alert alert-success hide" role="alert">
-          <b>当前状态：</b>酷Q所有服务正常运行中，没有发现异常。
+          <b>当前状态：</b>所有服务正常运行中，没有发现异常。
         </div>
         <div id="stattip-load" class="alert alert-info" role="alert">
           <b>当前状态：</b>正在检测运行状态，请稍候..
@@ -136,7 +135,7 @@
   <div class="footer">
     <div class="container">
       <p><span class="glyphicon glyphicon-refresh"></span> <span id="last-update"></span></p>
-      <p class="credit">Powered by <a href="https://github.com/CoolQ/Cup" target="_blank">Cup</a></p>
+      <p class="credit">Powered by <a href="https://github.com/xhlgr/Cup" target="_blank">Wybus</a></p>
     </div>
   </div>
   <script type="template/mustache" id="server-template">
@@ -153,8 +152,11 @@
     </tr>
     <tr class="{{alert}} barl">
       <td colspan="8" class="barls">
+        {{#avgtime}}
+      </td>
+      <td colspan="8" class="barls">
         <div class="progress">
-        {{#progress}}
+        {{#progress}}{{#progress}}
           <div class="progress-bar progress-bar-{{types}} set-tooltip" style="width: {{len}}%" data-toggle="tooltip" data-placement="top" title="{{stattip}}"></div>
         {{/progress}}
        </div>
