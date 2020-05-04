@@ -1,6 +1,6 @@
-#uptime
+# uptimestatus
 
-基于 [Upscuits](https://github.com/digibart/upscuits)、[酷Q状态](https://github.com/CoolQ/Cup)，以 [UptimeRobot](https://uptimerobot.com/) 为数据源的在线状态统计页面。
+基于[酷Q状态](https://github.com/CoolQ/Cup) (酷Q状态基于[Upscuits](https://github.com/digibart/upscuits))，以 [UptimeRobot](https://uptimerobot.com/) 为数据源的在线状态统计页面。
 
 **2016-10-06** Uptime Robot 已经新增 Public Status Pages 功能，详见 [官网](https://blog.uptimerobot.com/introducing-public-status-pages-yay/)。
 
