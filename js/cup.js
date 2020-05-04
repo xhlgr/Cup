@@ -80,7 +80,7 @@ myApp.dashboard = (function($) {
 
   /* build the html */
   function buildServerHTML(data, ids) {
-    console.log(data);
+    //console.log(data);
     data.alert = "";
     switch (parseInt(data.status, 10)) {
       case 0:
