@@ -50,14 +50,14 @@ myApp.dashboard = (function($) {
 
     var r = []; // custom_uptime_ranges
     r.push((now - 86400 * 30) + '_' + now);
+    if (now === midnight) now += 1;
+    r.push(midnight + '_' + now);
     r.push((midnight - 86400 * 1) + '_' + (midnight - 86400 * 0 - 1));
     r.push((midnight - 86400 * 2) + '_' + (midnight - 86400 * 1 - 1));
     r.push((midnight - 86400 * 3) + '_' + (midnight - 86400 * 2 - 1));
     r.push((midnight - 86400 * 4) + '_' + (midnight - 86400 * 3 - 1));
     r.push((midnight - 86400 * 5) + '_' + (midnight - 86400 * 4 - 1));
     r.push((midnight - 86400 * 6) + '_' + (midnight - 86400 * 5 - 1));
-    if (now === midnight) now += 1;
-    r.push(midnight + '_' + now);
     return { ranges: r.join('-'), secondsToday: now - midnight };
   }
   /* load uptime variables from uptimerobot
