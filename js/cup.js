@@ -256,7 +256,7 @@ myApp.dashboard = (function($) {
       { uptime: uptimes[7], uptimetext: uptimetext[7], uptype: getUptimeColor, upsign: getUptimeSign }
     ];
     //average_response_time
-    data.avgtime='近24h：平均响应时间'+ Number(data.average_response_time).toFixed(2) + 'ms';
+    data.avgtime='近24h：平均响应时间'+ Number(data.average_response_time).toFixed(0) + 'ms';
     
     var $output = $(Mustache.render(_template, data));
     return $output;
