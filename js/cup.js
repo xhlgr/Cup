@@ -136,8 +136,8 @@ myApp.dashboard = (function($) {
       bar.push({
         typeid: typeid,
         len: 1,
-        left: barstarttime,
-        right: barendtime
+        left: barendtime,
+        right: barstarttime
       });
     } else {
       var starttime = barstarttime,
@@ -167,8 +167,8 @@ myApp.dashboard = (function($) {
           bar.push({
             typeid: endtype,
             len: (endtime - starttime) / period,
-            left: starttime,
-            right: endtime
+            left: endtime,
+            right: starttime
           });
         }
         endtime = starttime;
@@ -197,8 +197,8 @@ myApp.dashboard = (function($) {
           bar.push({
             typeid: starttype,
             len: remainlen,
-            start: barstarttime,
-            end: bar[bar.length - 1].left
+            start: bar[bar.length - 1].left,
+            end: barstarttime
           });
         }
       }
@@ -210,12 +210,12 @@ myApp.dashboard = (function($) {
       if (stat.len == 1) {
         stattip += " (近24小时)"
       } else {
-        if (stat.right - stat.left < 1000 * 3540) {
-          stattip += " (" + new Number((stat.right - stat.left) / (1000 * 60)).toFixed(0) + " 分钟)";
+        if (stat.left - stat.right < 1000 * 3540) {
+          stattip += " (" + new Number((stat.left - stat.right) / (1000 * 60)).toFixed(0) + " 分钟)";
         } else {
-          stattip += " (" + new Number((stat.right - stat.left) / (1000 * 3600)).toFixed(1) + " 小时)";
+          stattip += " (" + new Number((stat.left - stat.right) / (1000 * 3600)).toFixed(1) + " 小时)";
         }
-        stattip += "<br><span class=\"ttime\">" + num2string(stat.left) + " ~ " + num2string(stat.right) + "</span>";
+        stattip += "<br><span class=\"ttime\">" + num2string(stat.right) + " ~ " + num2string(stat.left) + "</span>";
       }
       data.progress.push({
         typeid: stat.typeid,
