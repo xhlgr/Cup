@@ -210,8 +210,8 @@ myApp.dashboard = (function($) {
       if (stat.len == 1) {
         stattip += " (近24小时)"
       } else {
-        if (stat.right- stat.left < 1000 * 3540) {
-          stattip += " (" + new Number((stat.right- stat.left) / (1000 * 60)).toFixed(0) + " 分钟)";
+        if (stat.right - stat.left < 1000 * 3540) {
+          stattip += " (" + new Number((stat.right - stat.left) / (1000 * 60)).toFixed(0) + " 分钟)";
         } else {
           stattip += " (" + new Number((stat.right - stat.left) / (1000 * 3600)).toFixed(1) + " 小时)";
         }
