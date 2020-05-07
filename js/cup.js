@@ -143,7 +143,7 @@ myApp.dashboard = (function($) {
       var starttime = barstarttime,
           endtime = barendtime,
           starttype, endtype;
-      for (var r = data.logs.length-1; r >= 0; r--) {
+      for (var r = 0; r < data.logs.length; r++) {
         starttime = data.logs[r].datetime * 1000;
         if (starttime < barstarttime) {
           starttime = barstarttime;
