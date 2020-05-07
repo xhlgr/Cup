@@ -205,7 +205,7 @@ myApp.dashboard = (function($) {
     }
     var stat, stattip;
     data.progress = [];
-    while (stat = bar.pop()) {
+    while (stat = bar.shift()) {//(stat = bar.pop()) {
       stattip = "" + Type2Word(parseInt(stat.typeid), true);
       if (stat.len == 1) {
         stattip += " (近24小时)"
